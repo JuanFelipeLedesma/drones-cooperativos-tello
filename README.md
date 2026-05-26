@@ -1,7 +1,7 @@
 # Sistema Cooperativo de Drones basado en Modelos Dinámicos y Redes Ad-Hoc
 
 > Proyecto de grado — **Universidad de los Andes**, Departamento de Ingeniería de Sistemas y Computación.
-> Autor: **Juan Felipe Ledesma Velásquez** · Asesores: **Camilo Andrés Escobar Velásquez, PhD.** y ** Jonathan Camargo Leyva, PhD.** · 2026.
+> Autor: **Juan Felipe Ledesma Velásquez** · Asesores: **Camilo Andrés Escobar Velásquez, PhD.** y **Jonathan Camargo Leyva, PhD.** · 2026.
 
 Validación experimental de **control cooperativo de dos drones de bajo costo** (Ryze/DJI Tello)
 coordinados mediante una **red Ad-Hoc** (enlace Ethernet entre dos computadores) y localizados
