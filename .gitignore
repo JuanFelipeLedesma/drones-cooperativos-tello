@@ -1,0 +1,30 @@
+# ---- Python ----
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# ---- macOS / OS cruft ----
+.DS_Store
+.AppleDouble
+Thumbs.db
+
+# ---- Datos pesados que NO van al repo ----
+# Capturas de la calibración de cámara (62 MB, calibración descartada — ver docs/DESIGN_DECISIONS.md)
+calibration_captures/
+
+# Videos cenitales de la prueba 5.3 (no versionados por tamaño; ver docs/RESULTS.md)
+*.mp4
+*.mov
+*.MOV
+*.MP4
+
+# ---- Artefactos temporales ----
+*.tmp
+*.log
+build/
+dist/

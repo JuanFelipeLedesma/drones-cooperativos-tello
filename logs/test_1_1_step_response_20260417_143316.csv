@@ -1,0 +1,2 @@
+timestamp,phase,command,repeat,pos_x,pos_y,pos_z,marker_id,tello_height,tello_battery
+1776454412.550533,pre_hover,forward_50,1,,,,,20,77

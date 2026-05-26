@@ -1,0 +1,22 @@
+# Dependencias del proyecto — Sistema Cooperativo de Drones
+# Probado con Python 3.14 (Mac) y Python 3.10 (Ubuntu 22.04).
+# Compatible en principio con Python >= 3.9.
+#
+# Instalación:
+#   python3 -m venv venv
+#   source venv/bin/activate        # en Windows: venv\Scripts\activate
+#   pip install -r requirements.txt
+
+# --- Control de los drones Tello (SDK sobre WiFi/UDP) ---
+djitellopy==2.5.0
+
+# --- Visión por computador: detección ArUco y estimación de pose ---
+opencv-python==4.13.0.92
+
+# --- Cómputo numérico y ajuste de modelos ---
+numpy==2.4.4
+scipy==1.17.1
+
+# --- Generación de figuras del informe ---
+matplotlib==3.10.9
+pillow==12.2.0
