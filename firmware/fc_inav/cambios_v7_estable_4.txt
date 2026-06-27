@@ -1,0 +1,56 @@
+
+Observaciones
+
+* Se cambió el orden de los motores
+* Se desactivaron todos los modos menos el ARM y el Angle
+* Se aplicaron otros ajustes por CLI
+
+** Cambios en CLI **
+set receiver_type = SERIAL
+set serialrx_provider = IBUS
+set serialrx_inverted = OFF
+set rx_min_usec = 885
+set rx_max_usec = 2115
+set min_check = 1050
+set max_check = 1900
+
+set align_board_roll = 0
+set align_board_pitch = 0
+set align_board_yaw = 0
+
+set motor_direction_inverted = OFF
+set motorstop_on_low = OFF
+set throttle_idle = 5.500
+
+set mag_hardware = NONE
+set inav_default_alt_sensor = BARO
+
+# Quitar modos raros temporalmente
+aux 1 0 0 900 900
+aux 3 0 0 900 900
+
+# Traducción aproximada del motor_output_reordering estable de Betaflight
+mmix reset
+mmix 0  1.000  1.000  1.000  1.000
+mmix 1  1.000  1.000 -1.000 -1.000
+mmix 2  1.000 -1.000  1.000 -1.000
+mmix 3  1.000 -1.000 -1.000  1.000
+
+save
+
+** Cosas nuevas en CLI sin modificar **
+N/A
+
+** Cambios manuales **
+
+** Revisiones **
+
+* Estado de CH 5 y CH 6 = OK
+
+(NUEVA)			CH 5 = ARM 1000
+(NUEVA)			CH 6 = ANGLE 1500
+(NUEVA)			CH 6 = ANGLE 2000
+
+
+*** Actualización de dump y diff all
+

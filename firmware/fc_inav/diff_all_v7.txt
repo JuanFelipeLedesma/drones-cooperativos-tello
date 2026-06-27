@@ -1,0 +1,216 @@
+# version
+# INAV/OMNIBUSF4PRO 9.0.1 Feb 13 2026 / 06:53:58 (d44f2cf6) 
+# GCC-13.2.1 20231009
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults noreboot
+
+# resources
+
+# Timer overrides
+
+# Outputs [servo]
+
+# safehome
+
+# Fixed Wing Approach
+
+# geozone
+
+# geozone vertices
+
+# features
+feature GPS
+feature PWM_OUTPUT_ENABLE
+
+# beeper
+
+# blackbox
+blackbox -NAV_ACC
+blackbox NAV_POS
+blackbox NAV_PID
+blackbox MAG
+blackbox ACC
+blackbox ATTI
+blackbox RC_DATA
+blackbox RC_COMMAND
+blackbox MOTORS
+blackbox -GYRO_RAW
+blackbox -PEAKS_R
+blackbox -PEAKS_P
+blackbox -PEAKS_Y
+blackbox SERVOS
+
+# Receiver: Channel map
+
+# Ports
+serial 0 2 115200 115200 0 115200
+serial 5 64 115200 115200 0 115200
+
+# LEDs
+
+# LED color
+
+# LED mode_color
+
+# Modes [aux]
+aux 0 0 0 900 1100
+aux 2 1 1 1400 2100
+
+# Adjustments [adjrange]
+
+# Receiver rxrange
+
+# temp_sensor
+
+# Mission Control Waypoints [wp]
+#wp 0 invalid
+
+# OSD [osd_layout]
+
+# Programming: logic
+
+# Programming: global variables
+
+# Programming: PID controllers
+
+# OSD: custom elements
+
+# master
+set gyro_main_lpf_hz = 110
+set gyro_dyn_lpf_min_hz = 85
+set gyro_dyn_lpf_max_hz = 300
+set gyro_dyn_lpf_curve_expo = 3
+set dynamic_gyro_notch_q = 250
+set dynamic_gyro_notch_min_hz = 73
+set dynamic_gyro_notch_mode = 3D
+set setpoint_kalman_q = 200
+set gyro_zero_x = 13
+set gyro_zero_y = -20
+set gyro_zero_z = 15
+set ins_gravity_cmss =  983.741
+set acc_hardware = MPU6500
+set acczero_x = -12
+set acczero_y = 64
+set acczero_z = -78
+set accgain_x = 4108
+set accgain_y = 4098
+set accgain_z = 4065
+set align_mag = CW270FLIP
+set mag_hardware = NONE
+set baro_hardware = BMP280
+set pitot_hardware = VIRTUAL
+set min_check = 1050
+set serialrx_provider = IBUS
+set blackbox_rate_denom = 2
+set motor_pwm_protocol = DSHOT300
+set failsafe_procedure = DROP
+set applied_defaults = 2
+set gps_ublox_use_galileo = ON
+set gps_ublox_use_beidou = ON
+set gps_ublox_use_glonass = ON
+set airmode_type = THROTTLE_THRESHOLD
+set inav_default_alt_sensor = BARO
+
+# control_profile
+control_profile 1
+
+set mc_i_pitch = 90
+set mc_d_pitch = 27
+set mc_cd_pitch = 88
+set mc_p_roll = 36
+set mc_i_roll = 82
+set mc_d_roll = 24
+set mc_cd_roll = 80
+set mc_p_yaw = 43
+set mc_i_yaw = 84
+set mc_cd_yaw = 90
+set dterm_lpf_hz = 105
+set d_boost_min =  1.000
+set d_boost_max =  1.000
+set antigravity_gain =  2.000
+set antigravity_accelerator =  5.000
+set smith_predictor_delay =  1.447
+set tpa_rate = 20
+set tpa_breakpoint = 1200
+set rc_expo = 80
+set rc_yaw_expo = 80
+set roll_rate = 70
+set pitch_rate = 70
+set yaw_rate = 60
+set ez_enabled = ON
+set ez_response = 92
+set ez_damping = 108
+set ez_stability = 110
+set ez_aggressiveness = 80
+set ez_rate = 134
+set ez_expo = 118
+
+# control_profile
+control_profile 2
+
+set d_boost_min =  1.000
+set d_boost_max =  1.000
+set antigravity_gain =  2.000
+set antigravity_accelerator =  5.000
+set tpa_rate = 20
+set tpa_breakpoint = 1200
+
+# control_profile
+control_profile 3
+
+set d_boost_min =  1.000
+set d_boost_max =  1.000
+set antigravity_gain =  2.000
+set antigravity_accelerator =  5.000
+set tpa_rate = 20
+set tpa_breakpoint = 1200
+
+# mixer_profile
+mixer_profile 1
+
+set model_preview_type = 3
+set motorstop_on_low = OFF
+
+# Mixer: motor mixer
+
+mmix reset
+
+mmix 0  1.000  1.000  1.000  1.000
+mmix 1  1.000  1.000 -1.000 -1.000
+mmix 2  1.000 -1.000  1.000 -1.000
+mmix 3  1.000 -1.000 -1.000  1.000
+
+# Mixer: servo mixer
+
+# mixer_profile
+mixer_profile 2
+
+
+# Mixer: motor mixer
+
+# Mixer: servo mixer
+
+# battery_profile
+battery_profile 1
+
+set throttle_idle =  5.500
+
+# battery_profile
+battery_profile 2
+
+
+# battery_profile
+battery_profile 3
+
+
+# restore original profile selection
+control_profile 1
+mixer_profile 1
+battery_profile 1
+
+# save configuration
+save

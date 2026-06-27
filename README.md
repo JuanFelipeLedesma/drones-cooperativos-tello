@@ -128,6 +128,7 @@ Detalle completo en [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 ├── aruco_markers/                ← marcadores listos para imprimir + chessboard
 ├── logs/                         ← DATOS CRUDOS de todas las corridas (CSV/JSON)
 ├── presentation_assets/          ← las 16 figuras del informe (PNG)
+├── firmware/                     ← código del dron personalizado (XIAO ESP32-S3 + iNav)
 │
 ├── HANDOFF.md                    ← bitácora técnica completa del desarrollo
 ├── Informe_Tesis_Drones_Cooperativos.docx ← informe de resultados (con figuras)
@@ -214,7 +215,8 @@ Procedimiento y resultados de cada una en [`docs/REPLICATION.md`](docs/REPLICATI
 | [`docs/DESIGN_DECISIONS.md`](docs/DESIGN_DECISIONS.md) | **Por qué** cada decisión, y catálogo de lo que **no** funcionó (oro metodológico). |
 | [`docs/TELLO_EDU.md`](docs/TELLO_EDU.md) | Cómo se haría con **Tello EDU** (modo estación / SDK 3.0 / enjambre) y qué cambiaría. |
 | [`docs/RESULTS.md`](docs/RESULTS.md) | Resultados numéricos completos por prueba, con las figuras. |
-| [`docs/FUTURE_WORK.md`](docs/FUTURE_WORK.md) | Mejoras concretas, incluido el prototipo de dron propio (XIAO ESP32S3 + PCA9685). |
+| [`docs/CUSTOM_DRONE.md`](docs/CUSTOM_DRONE.md) | **Dron personalizado**: inventario de componentes, configuración de iNav, evolución del firmware del XIAO ESP32-S3 (puente PWM descartado → bridge MSP adoptado), versión integrada con cámara WiFi. |
+| [`docs/FUTURE_WORK.md`](docs/FUTURE_WORK.md) | Mejoras concretas y trabajo futuro del proyecto. |
 
 La bitácora cronológica del desarrollo está en [`HANDOFF.md`](HANDOFF.md).
 
